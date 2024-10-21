@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Главная'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page home-page">
+        <div data-observ></div>
+        <section class="intro-section">
+            <div class="intro-section__container">
+                <div class="swiper intro-section-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/test.png" class="swiper-slide__img" alt="Olso">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__content">
+                                <div class="swiper-slide__pretitle">
+                                    <div class="swiper-slide__text">
+                                        %
+                                    </div>
+
+                                    <div class="swiper-slide__text">
+                                        olso
+                                    </div>
+
+                                    <div class="swiper-slide__text">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="swiper-slide__title">
+                                    Summer sale —  up to 50%
+                                </div>
+
+                                <div class="swiper-slide__after-title">
+                                    <div class="swiper-slide__after-title_left">
+                                        <div class="swiper-slide__text">
+                                            мы объявляем вторую<br> часть распродажи
+                                        </div>
+                                        <div class="swiper-slide__text">
+                                            теперь выбор позиций <br> со скидками еще больше
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__after-title_tags">
+                                        <div class="swiper-slide__after-title_tag">
+                                            <span>брюки</span>
+
+                                        </div>
+                                        <div class="swiper-slide__after-title_tag">
+                                            <span>платья</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide__goods-wrapper">
+                                    <div class="swiper-slide__goods">
+                                        <img src="images/g1.png" alt="Olso">
+                                        <img src="images/g2.png" alt="Olso">
+                                        <img src="images/g3.png" alt="Olso">
+                                        <img src="images/g4.png" alt="Olso">
+                                        <img src="images/g5.png" alt="Olso">
+                                        <img src="images/g6.png" alt="Olso">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__content">
+                                <div class="swiper-slide__pretitle">
+                                    <div class="swiper-slide__text">
+                                        new
+                                    </div>
+
+                                    <div class="swiper-slide__text">
+                                        olso
+                                    </div>
+
+                                    <div class="swiper-slide__text">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="swiper-slide__title">
+                                    новые поступления платьев
+                                </div>
+
+                                <div class="swiper-slide__after-title">
+                                    <div class="swiper-slide__after-title_tags no-tag">
+                                        <div class="swiper-slide__after-title_tag">
+
+                                        </div>
+                                        <div class="swiper-slide__after-title_tag">
+                                            <span>online</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide__goods-wrapper">
+                                    <div class="swiper-slide__goods">
+                                        <img src="images/g1.png" alt="Olso">
+                                        <img src="images/g2.png" alt="Olso">
+                                        <img src="images/g3.png" alt="Olso">
+                                        <img src="images/g4.png" alt="Olso">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        @@include('html/components/links/links.html', {
+        "block1": "true",
+        "class": ""
+        })
+
+        @@include('html/components/slider-goods/slider-goods.html', {
+        "title": "Комплекты",
+        "id": "1"
+        })
+
+        @@include('html/components/slider-goods/slider-goods.html', {
+        "title": "inspiration",
+        "id": "2"
+        })
+
+
+        @@include('html/components/links/links.html', {
+        "block2": "true",
+        "class": "links-with-img"
+        })
+
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/cookie/cookie.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Контакты'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page contacts-page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        Контакты
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="detail contacts">
+            <div class="detail__container">
+                <h1>
+                    Контакты
+                </h1>
+
+                <img src="images/sh3.png" alt="Olso">
+
+                <div class="detail__content">
+                    <div class="contacts-text__wrapper">
+                        <p class="contacts__text">
+                            Мы с радостью ответим на любые вопросы по телефону или по электронной почте support@olso.com
+                        </p>
+
+                        <p class="contacts__text">
+                            Если у вас есть какие-либо вопросы об одном из наших магазинов, воспользуйтесь нашей картой для поиска магазинов, чтобы найти нужную вам информацию. <br>
+                            Если вам нужна помощь с онлайн-заказом, позвоните в нашу русскоговорящую команду по телефону: <a  href="tel:+7 909 668 55 55">+7 909 668 55 55</a>
+                        </p>
+
+                        <p class="contacts__text">
+                            Есть вопросы по оплате? Пожалуйста, прочитайте <a href="#">раздел</a>, либо свяжитесь с нами. <br>
+                            Поддержка по телефону - часы работы:   с 08:00 до 22:00 по МСК
+
+                        </p>
+                    </div>
+
+                    <p style="margin-top: 40px">
+                        <b>
+                            Если вы не нашли ответ на свой вопрос, заполните форму ниже.
+                        </b>
+                    </p>
+
+                    <form action="/" method="get" class="contacts-form validation-form" novalidate="true">
+                        <div class="form-block__controls">
+                            <div class="form-control form-control--col">
+                                <input id="name"
+                                       class="form-control__input "
+                                       type="text"
+                                       name="name"
+                                       placeholder="имя *"
+                                       data-pristine-required-message="Обязательное поле"
+                                       maxlength='50'
+                                       required=""
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-block__controls">
+                            <div class="form-control form-control--col">
+                                <input id="email1"
+                                       class="form-control__input "
+                                       type="text"
+                                       name="email1"
+                                       placeholder="e-mail *"
+                                       data-pristine-required-message="Обязательное поле"
+                                       data-pristine-custom-email
+                                       maxlength='50'
+                                       required=""
+                                >
+
+                            </div>
+                        </div>
+
+                        <div class="form-block__controls">
+                            <div class="form-control form-control--col">
+                                <input id="phone"
+                                       class="form-control__input "
+                                       type="text"
+                                       name="phone"
+                                       placeholder="телефон"
+                                       data-pristine-required-message="Обязательное поле"
+                                       maxlength='50'
+
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-block__controls">
+                            <div class="form-control form-control--col">
+                                <input id="place"
+                                       class="form-control__input "
+                                       type="text"
+                                       name="place"
+                                       placeholder="страна, город"
+                                       data-pristine-required-message="Обязательное поле"
+                                       maxlength='50'
+
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-block__controls">
+                            <div class="form-control form-control--col">
+                                <input id="mess"
+                                       class="form-control__input "
+                                       type="text"
+                                       name="mess"
+                                       placeholder="сообщение"
+                                       data-pristine-required-message="Обязательное поле"
+                                       maxlength='50'
+
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-control__btn-wrapper">
+                            <div class="btn">
+                                отправить запрос
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+
+
+            </div>
+        </section>
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/filter/filter.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/cookie/cookie.html', {})
+
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

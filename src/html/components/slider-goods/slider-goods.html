@@ -1,0 +1,39 @@
+<section class="slider-goods" data-slider-id="@@id">
+    <div class="slider-goods__container">
+        <div class="slider-goods-wrapper">
+            <div class="slider-goods__title-wrapper">
+                <div class="slider-goods__title">
+                    @@title
+                </div>
+                <div class="slider-arrow-wrapper">
+                    <div class="slider-arrow slider-arrow-prev" data-slider-id="@@id">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 24L13 17L21 10" stroke="black" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="slider-arrow slider-arrow-next" data-slider-id="@@id">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 24L21 17L13 10" stroke="black" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper slider-goods-slider">
+                <div class="swiper-wrapper">
+                    @@include('./swiper-slide.html', {
+                        "src": "images/goods/1.png"
+                    })
+                    @@include('./swiper-slide.html', {"src": "images/goods/2.png"})
+                    @@include('./swiper-slide.html', {"src": "images/goods/3.png"})
+                    @@include('./swiper-slide.html', {"src": "images/goods/4.png"})
+                    @@include('./swiper-slide.html', {"src": "images/goods/5.png"})
+                    @@include('./swiper-slide.html', {"src": "images/goods/6.png"})
+                    @@include('./swiper-slide.html', {"src": "images/goods/7.png"})
+                    @@include('./swiper-slide.html', {"src": "images/goods/8.png"})
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

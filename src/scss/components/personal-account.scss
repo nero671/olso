@@ -1,0 +1,401 @@
+.personal-account-page-wrapper {
+  .restore-pass-popup {
+    .btn-prev[data-type="forgot-pass"] {
+      display: none;
+    }
+
+    .btn[data-type="pass"] {
+      width: 100% !important;
+    }
+  }
+}
+
+.personal-account-page__order {
+  .account-content {
+    flex-direction: column;
+    gap: 53px;
+  }
+}
+
+.account {
+  margin-top: 60px;
+  padding-bottom: 100px;
+  &-container {
+    width: 1424px;
+    margin: 0 auto;
+
+    @include media(1450) {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    gap: 242px;
+    overflow: clip;
+
+    @include media(1450) {
+      gap: 80px;
+    }
+
+    @include media(1000) {
+      gap: 50px;
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 40px;
+    width: 234px;
+    position: sticky;
+    top: 80px;
+
+    @include media(1350) {
+      position: static;
+    }
+  }
+
+  &-link {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #909090;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #909090;
+
+    &.active {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &-content {
+    display: flex;
+    gap: 124px;
+    width: 100%;
+
+    @include media(1650) {
+      gap: 170px;
+    }
+
+    @include media(1450) {
+      justify-content: space-between;
+    }
+
+    @include media(1000) {
+      gap: 20px;
+    }
+  }
+
+  &-photo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    visibility: hidden;
+
+    picture, img {
+      width: 233px;
+      height: 277px;
+    }
+  }
+
+  &-form__input-wrapper {
+    position: relative;
+
+    .account-change {
+      @include media(1350) {
+        position: absolute;
+        bottom: -30px;
+      }
+    }
+  }
+
+  &-change {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #909090;
+    padding-bottom: 1px;
+    width: fit-content;
+    border-bottom: 1px solid #909090;
+    cursor: pointer;
+  }
+
+  &-title {
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .account-personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+  }
+
+  .account-personal__item {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  input {
+    border-bottom: 1px solid #000;
+  }
+
+  .account-form__input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+
+    input {
+      border-bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .account-personal__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(1200) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  .form-control__pass-wrapper {
+    position: relative;
+
+    &.active {
+      .show-eye path:last-child {
+        opacity: 0;
+      }
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .show-eye {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .account-btn {
+    width: 238px;
+    height: 54px;
+  }
+
+  &-orders {
+    height: 100%;
+    overflow: auto;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &-order-links {
+    display: flex;
+    gap: 12px;
+  }
+
+  &-order-link {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #909090;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #909090;
+    width: 120px;
+    cursor: pointer;
+
+    &.show {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    &__checks {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .custom-checkbox + label span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #909090;
+      }
+    }
+
+    &__btn {
+      border: 1px solid #000;
+      padding: 5px 6px;
+      width: 354px;
+      height: 54px;
+      background: transparent;
+      color: #000;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  .cart-good__values_mob {
+    display: none !important;
+  }
+}
+
+@include media(700) {
+  .account {
+    &-wrapper {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    &-links {
+      width: 100%;
+    }
+
+    &-content {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .account-personal-info {
+      order: 1;
+    }
+
+    &-photo {
+      align-items: center;
+      display: none;
+    }
+
+    .account-personal-info {
+      gap: 40px;
+    }
+
+    .account-personal__item {
+      gap: 20px;
+    }
+  }
+}
+
+@include media(1350) {
+  .personal-account-page__order {
+    .account-wrapper {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .account-personal__title-wrapper {
+      flex-direction: row !important;
+    }
+  }
+}
+
+@include media(600) {
+  .personal-account-page__order {
+
+    .account-personal__title-wrapper {
+      flex-direction: column !important;
+      gap: 20px;
+    }
+
+    .account-good {
+      .cart-good__wrapper {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .cart-good__title-wrapper {
+        justify-content: space-between;
+      }
+
+      .cart-good__status-info {
+        width: 100%;
+      }
+
+      .cart-good__item {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .cart-good__img {
+        align-self: center;
+      }
+    }
+
+    .account-orders {
+      height: 100%;
+    }
+
+    .account-order-links {
+      justify-content: center;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    .account-good {
+      position: relative;
+
+      .cart-good__info {
+        .cart-good__values {
+          display: none;
+        }
+      }
+
+      .cart-good__status-info .cart-good__title-wrapper {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+      }
+
+      .cart-good__values_mob {
+        display: flex !important;
+        margin-top: 15px;
+        justify-content: space-between;
+      }
+    }
+
+    .account-good.delivered .cart-good__btn {
+      width: 100%;
+    }
+  }
+}
+
+@include media(350) {
+  .account-change {
+    font-size: 12px;
+  }
+
+  .account-good .cart-good__btn,
+  .account-settings__btn {
+    width: 100% !important;
+  }
+}

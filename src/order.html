@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Оформление заказа'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page order-page">
+        <div data-observ></div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            корзина
+                        </a>
+                    </li>
+
+                    <li>
+                        оформление заказа
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="order-page__title">
+            оформление заказа
+        </h1>
+
+        <section class="order-block">
+            <div class="order__container">
+                <div class="order">
+                    <div class="order-item">
+                        <div class="order__personal-info">
+
+                            <div class="order__personal-info-item">
+                                <div class="order__personal-info_steps">
+                                    1 / 3
+                                </div>
+                            </div>
+
+                            <div class="order__personal-info-item">
+                                <div class="order__personal-info-wrapper">
+                                    <div class="order__personal-info_title">
+                                        адрес и доставка
+                                    </div>
+
+                                    <div class="order__personal-info">
+                                        <div class="order__personal-info_subtitle">
+                                            способ доставки
+                                        </div>
+
+                                        <div class="order__personal-info_switcher">
+
+                                            <div class="order__personal-info_switch show">
+                                                <div class="order__personal-info_switch-wrapper">
+                                                    <div class="order__personal-info_radio">
+                                                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 4L4 7L10 1" stroke="white" stroke-width="1.5" />
+                                                        </svg>
+                                                    </div>
+
+                                                    самовывоз
+                                                </div>
+                                                <div class="order__personal-info_text">
+                                                    магазины, пвз
+                                                </div>
+                                            </div>
+
+                                            <div class="order__personal-info_switch">
+                                                <div class="order__personal-info_switch-wrapper">
+                                                    <div class="order__personal-info_radio">
+                                                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 4L4 7L10 1" stroke="white" stroke-width="1.5" />
+                                                        </svg>
+                                                    </div>
+
+                                                    Доставка курьером
+                                                </div>
+                                                <div class="order__personal-info_text">
+                                                    служба доставки
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="order__personal-info-content active">
+                                        <div class="order__personal-info-content_item">
+                                            <div class="order__personal-info_subtitle">
+                                                пункт выдачи
+                                            </div>
+
+                                            <div class="order-delivery__wrapper">
+
+                                                <div class="order-point">
+                                                    <div class="order-point__title">
+                                                        ТРЦ «Седьмое небо»
+                                                    </div>
+
+                                                    <div class="order-point__text">
+                                                        г. нижний новгород, ул.Бетанкура 1, 1 этаж
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-delivery__btn" data-type="pick-up">
+                                                    изменить
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="order__personal-info-content_item">
+                                            <div class="order__personal-info_subtitle">
+                                                дата доставки
+                                            </div>
+
+                                            <div class="order-date__wrapper">
+                                                <div class="order-date">
+                                                    28 августа, 10:00-12:00
+                                                </div>
+
+                                                <div class="order__personal-info_text">
+                                                    бесплатная доставка
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="order__personal-info-content">
+                                        <div class="order__personal-info-content_item">
+                                            <div class="order__personal-info_subtitle">
+                                                пункт выдачи
+                                            </div>
+
+                                            <div class="order-delivery__wrapper">
+
+                                                <div class="order-point">
+                                                    <div class="order-point__title">
+                                                        ул. Интернациональная, д. 300, кв. 320, 213807
+                                                    </div>
+
+                                                    <div class="order-point__text">
+                                                        г. нижний новгород
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-delivery__btn" data-type="address">
+                                                    изменить
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <div class="order__personal-info-content_item">
+                                            <div class="order__personal-info_subtitle">
+                                                дата доставки
+                                            </div>
+
+                                            <div class="order-date__wrapper">
+                                                <div class="order-date">
+                                                    28 августа, 10:00-12:00
+                                                </div>
+
+                                                <div class="order__personal-info_text">
+                                                    бесплатная доставка
+                                                </div>
+                                            </div>
+
+                                            <div class="order-delivery__express order-switcher">
+
+                                                <div class="order-switcher-wrapper">
+                                                    <div class="order__personal-info_radio">
+                                                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 4L4 7L10 1" stroke="white" stroke-width="1.5" />
+                                                        </svg>
+                                                    </div>
+
+                                                    Доставка курьером
+                                                </div>
+
+                                                <div class="order-after-switcher">
+                                                    <div class="order__personal-info_text">
+                                                        сегодня за 2 часа
+                                                    </div>
+
+                                                    <div class="order__personal-info_text">
+                                                        <span>110</span> ₽
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="order-date-issues">
+                                                <div class="order-select custom-select">
+                                                    <div class="select-selected">
+                                                        <span>10:00-12:00</span>
+                                                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 1L5 5L9 1" stroke="#909090" stroke-width="2" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="select-items">
+                                                        <div class="select-option">12:00-14:00</div>
+                                                        <div class="select-option active">14:00-16:00</div>
+                                                        <div class="select-option active">16:00-18:00</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order-datepicker">
+                                                    <input type="text" id="datepicker">
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.42443 17.9167C4.00345 17.9167 3.64714 17.7708 3.35547 17.4792C3.0638 17.1875 2.91797 16.8312 2.91797 16.4102V5.25647C2.91797 4.8355 3.0638 4.47918 3.35547 4.18751C3.64714 3.89585 4.00345 3.75001 4.42443 3.75001H5.57818V1.9873H6.86026V3.75001H13.1744V1.9873H14.4244V3.75001H15.5782C15.9991 3.75001 16.3555 3.89585 16.6471 4.18751C16.9388 4.47918 17.0846 4.8355 17.0846 5.25647V16.4102C17.0846 16.8312 16.9388 17.1875 16.6471 17.4792C16.3555 17.7708 15.9991 17.9167 15.5782 17.9167H4.42443ZM4.42443 16.6667H15.5782C15.6423 16.6667 15.7011 16.6399 15.7544 16.5865C15.8079 16.5331 15.8346 16.4744 15.8346 16.4102V8.5898H4.16797V16.4102C4.16797 16.4744 4.19471 16.5331 4.24818 16.5865C4.30151 16.6399 4.36026 16.6667 4.42443 16.6667ZM4.16797 7.3398H15.8346V5.25647C15.8346 5.1923 15.8079 5.13355 15.7544 5.08022C15.7011 5.02675 15.6423 5.00001 15.5782 5.00001H4.42443C4.36026 5.00001 4.30151 5.02675 4.24818 5.08022C4.19471 5.13355 4.16797 5.1923 4.16797 5.25647V7.3398Z" fill="#909090" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="order__personal-info">
+
+                            <div class="order__personal-info-item">
+                                <div class="order__personal-info_steps">
+                                    2 / 3
+                                </div>
+                            </div>
+
+                            <div class="order__personal-info-item">
+                                <div class="order__personal-info-wrapper">
+                                    <div class="order__personal-info_title">
+                                        личные данные
+                                    </div>
+
+                                    <form class="order__personal-info_form validation-form">
+                                        <div class="form-block__controls">
+                                            <div class="form-control form-control--col">
+                                                <input type="text" id="fio" name="fio" placeholder="фио *" data-pristine-required-message="Обязательное поле" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-block__controls">
+                                            <div class="form-control form-control--col">
+                                                <input type="tel" id="tel" name="tel" placeholder="Телефон *" data-pristine-required-message="Обязательное поле" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-block__controls">
+                                            <div class="form-control form-control--col">
+                                                <input type="email" id="email" name="email" placeholder="email *" data-pristine-required-message="Обязательное поле" required>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="order__personal-info">
+
+                            <div class="order__personal-info-item">
+                                <div class="order__personal-info_steps">
+                                    3 / 3
+                                </div>
+                            </div>
+
+                            <div class="order__personal-info-item">
+                                <div class="order__personal-info-wrapper">
+                                    <div class="order__personal-info_title">
+                                        способ оплаты
+                                    </div>
+
+
+                                    <div class="order__personal-info_switcher-wrapper">
+                                        <div class="order-switcher">
+                                            <label>
+                                                <input
+                                                        class="custom-radio"
+                                                        type="radio"
+                                                        name="payment"
+
+                                                >
+                                                <label class="form-control__text" style="border:1px solid #000">
+                                                    Онлайн-картой
+                                                </label>
+
+                                                <div class="order__personal-info_text">
+                                                    Visa, VasterCard, Белкарт,
+                                                    Карты рассрочки
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="order-switcher">
+                                            <label>
+                                                <input
+                                                        class="custom-radio"
+                                                        type="radio"
+                                                        name="payment"
+
+                                                >
+                                                <label class="form-control__text" style="border:1px solid #000">
+                                                    Долями
+                                                </label>
+
+                                                <div class="order__personal-info_text">
+                                                    Оплатите 25% от стоимости покупки
+                                                </div>
+                                            </label>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="order-item">
+                        <div class="order-cart">
+                            <div class="order-cart-head">
+                                <div class="order-cart-head__wrapper">
+                                    <div class="order-cart-head__title">
+                                        корзина
+                                    </div>
+                                    <div class="order-cart-head__quantity">
+                                        <span>7</span> ШТ.
+                                    </div>
+                                </div>
+
+                                <div class="order-cart__change">
+                                    изменить
+                                </div>
+                            </div>
+
+                            <div class="order-cart__goods">
+                                <a href="#">
+                                    <img src="images/g1.png" alt="Olso">
+                                </a>
+                                <a href="#">
+                                    <img src="images/l2.png" alt="Olso">
+                                </a>
+                                <a href="#">
+                                    <img src="images/g3.png" alt="Olso">
+                                </a>
+                                <a href="#">
+                                    <img src="images/g4.png" alt="Olso">
+                                </a>
+                                <a href="#">
+                                    <img src="images/g5.png" alt="Olso">
+                                </a>
+                                <a href="#">
+                                    <img src="images/g6.png" alt="Olso">
+                                </a>
+                                <a href="#">
+                                    <img src="images/l1.png" alt="Olso">
+                                </a>
+                            </div>
+
+                            <div class="cart-total">
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">
+                                        Товары
+                                    </div>
+
+                                    <div class="cart-total__price cart-total__value">
+                                        <span>13 489</span> ₽
+                                    </div>
+                                </div>
+
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">
+                                        доставка
+                                    </div>
+
+                                    <div class="cart-total__price cart-total__value">
+                                        <span>404</span> ₽
+                                    </div>
+                                </div>
+
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">
+                                        Скидка
+                                    </div>
+
+                                    <div class="cart-total__price cart-total__discount">
+                                        <span>784</span> ₽
+                                    </div>
+                                </div>
+
+                                <div class="cart-total__item cart-total__promo">
+                                    <form class="cart-total-form">
+                                        <input type="text" name="cart-total-input" placeholder="введите Промокод">
+                                        <button type="submit">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.8462 17.6542L12.7923 16.5697L16.6115 12.7504H4.5V11.2504H16.6115L12.7923 7.43118L13.8462 6.34668L19.5 12.0004L13.8462 17.6542Z" fill="#909090"></path>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <div class="cart-total__promo-wrapper">
+                                        <div class="cart-total__title">
+                                            промокод применен
+                                        </div>
+
+                                        <div class="cart-total__price cart-total__promo-change">
+                                            изменить
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cart-total__item">
+                                    <div class="cart-total__title">
+                                        Итого
+                                    </div>
+
+                                    <div class="cart-total__price cart-total__calculated">
+                                        <span>12 684</span> ₽
+                                    </div>
+                                </div>
+
+                                <button class="btn" type="submit" data-type="thk">
+                                    оформить заказ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/popups/pick-up-popup.html', { })
+    @@include('html/components/popups/adress-popup.html', { })
+    @@include('html/components/popups/add-adress-popup.html', { })
+    @@include('html/components/popups/thk-popup.html', { })
+    @@include('html/components/cookie/cookie.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

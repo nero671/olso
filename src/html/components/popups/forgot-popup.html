@@ -1,0 +1,50 @@
+<div class="popup registration-popup forgot-pass-popup" data-popup="forgot-pass">
+    <div class="popup-wrapper">
+        <div class="close-popup button-close">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1 13" stroke="black" />
+                <path d="M1 1L13 13" stroke="black" />
+            </svg>
+        </div>
+        <div class="popup-content active">
+            <div class="registration-popup__title">
+                забыли пароль
+            </div>
+
+
+            <form action="/" method="get" class="form-block__form validation-form" novalidate="true">
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col">
+                        <input id="email1"
+                               class="form-control__input "
+                               type="text"
+                               name="email1"
+                               placeholder="e-mail *"
+                               data-pristine-required-message="Обязательное поле"
+                               data-pristine-custom-email
+                               maxlength='50'
+                               required=""
+                        >
+                        <span class="note">Укажите email, который был указан при регистрации Вашего аккаунта</span>
+                    </div>
+                </div>
+
+                <div class="form-control__btn-wrapper">
+                    <div class="btn-prev button-close" data-type="auth">
+                        назад
+                    </div>
+
+                    <div class="btn button-close" data-type="restore-pass">
+                        восстановить пароль
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+
+
+
+    </div>
+</div>

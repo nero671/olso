@@ -1,0 +1,31 @@
+<div class="catalog-collection">
+
+    <div class="catalog-collection__main-good">
+        <a href="#" data-type="color-popup">
+            <img src="@@src" loading="lazy" alt="Olso">
+        </a>
+    </div>
+
+    <div class="catalog-collection__other-good">
+        @@include('../good/small-good.html', {
+            "src": "@@src1",
+        })
+
+        @@include('../good/small-good.html', {
+            "src": "@@src2",
+        })
+
+        @@include('../good/small-good.html', {
+            "src": "@@src3",
+        })
+
+        @@if(context.four) {
+            @@include('../good/small-good.html', {
+            "src": "@@src4",
+            })
+        }
+
+
+    </div>
+
+</div>

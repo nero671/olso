@@ -1,0 +1,242 @@
+.footer {
+  width: -webkit-fill-available;
+  margin: 10px;
+  background: #fff;
+
+  &__container {
+
+  }
+
+  &-catalog {
+    text-transform: uppercase;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-logo {
+    margin-top: 60px;
+    text-align: center;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #000;
+
+      &:first-child {
+        span {
+          font-size: 19px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-top: 30px;
+      }
+
+      &:last-child {
+        margin-top: 50px;
+        text-align: right;
+      }
+    }
+  }
+
+  &-left {
+    background: #fff;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    border-right: 4px solid #F9F9F9;
+    padding: 10px;
+  }
+
+  &-right {
+    background: #fff;
+    width: 41%;
+    border-left: 4px solid #F9F9F9;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .footer-email {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &__label {
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      .footer-form {
+        position: relative;
+        overflow: hidden;
+
+        input {
+          width: 100%;
+          padding: 10px 6px;
+          background: #000;
+          font-weight: 500;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #fff;
+
+          &::placeholder {
+            color: #fff;
+          }
+        }
+
+        button {
+          padding: 5px 6px;
+          background: #000;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      &__info {
+        font-weight: 400;
+        font-size: 10px;
+        color: #909090;
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &-center {
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 60px;
+
+    .js-dropdown {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      li, a {
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #000;
+      }
+    }
+  }
+}
+
+@include media(991) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__container {
+    padding: 0;
+  }
+
+  .footer-left {
+    order: 3;
+    border-right: 0;
+    margin-top: 0;
+    padding: 30px 60px;
+    width: auto;
+    gap: 60px;
+
+    .footer-logo__wrapper {
+      width: 212px;
+    }
+  }
+
+  .footer-right {
+    width: 100%;
+    border-left: 0;
+    border-top: 4px solid #f9f9f9;
+    border-bottom: 4px solid #f9f9f9;
+    padding: 30px 60px;
+    gap: 60px;
+    align-items: center;
+
+    .footer-email {
+      width: 236px;
+    }
+  }
+
+  .footer-center {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0;
+    width: 236px;
+    gap: 40px;
+
+    .js-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      align-items: flex-start;
+      margin-top: -16px;
+
+      &:after {
+        position: absolute;
+        top: 5px;
+        left: 70px;
+      }
+
+      .js-dropdown__option {
+        position: static;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: $standartTrans;
+        gap: 20px;
+        box-shadow: none;
+      }
+
+      &.active {
+        .js-dropdown__option {
+          height: auto;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    ul:nth-child(2) {
+      display: none;
+    }
+
+    ul:nth-child(3) {
+      li:first-child,
+      li:last-child {
+        display: none;
+      }
+    }
+  }
+}

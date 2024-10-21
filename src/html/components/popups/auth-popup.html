@@ -1,0 +1,239 @@
+<div class="popup registration-popup auth-popup _is-open" data-popup="auth">
+    <div class="popup-wrapper">
+        <div class="registration-popup__header">
+            <div class="registration-popup__toggle">
+                <div class="registration-popup__toggle_link show">
+                    авторизация
+                </div>
+
+                <div class="registration-popup__toggle_link">
+                    регистрация
+                </div>
+            </div>
+
+            <div class="close-popup button-close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 1L1 13" stroke="black" />
+                    <path d="M1 1L13 13" stroke="black" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="popup-content active">
+            <div class="registration-popup__title">
+                Авторизация
+            </div>
+
+
+            <form action="/" method="get" class="form-block__form validation-form" novalidate="true">
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col">
+                        <input id="name"
+                               class="form-control__input "
+                               type="text"
+                               name="name"
+                               placeholder="e-mail или телефон"
+                               data-pristine-required-message="Обязательное поле"
+                               maxlength='50'
+                               required=""
+                        >
+                    </div>
+                </div>
+
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col form-control__pass-wrapper">
+                        <input id="pass"
+                               class="form-control__input "
+                               type="password"
+                               name="pass"
+                               placeholder="пароль"
+                               data-pristine-required-message="Обязательное поле"
+                               maxlength='50'
+                               required=""
+                        >
+
+                        <svg class="show-eye" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2087 6C6.79236 6 3 11.9587 3 11.9587C3 11.9587 5.7625 17.9174 12.2087 17.9174C18.7087 17.9174 21.4174 11.9587 21.4174 11.9587C21.4174 11.9587 17.6799 6 12.2087 6ZM12.2087 15.75C10.0962 15.75 8.41736 14.0712 8.41736 11.9587C8.41736 9.84618 10.0962 8.16736 12.2087 8.16736C14.3212 8.16736 16 9.84618 16 11.9587C16 14.0712 14.3212 15.75 12.2087 15.75Z" fill="black" />
+                            <path d="M13.834 11.959C13.834 12.8568 13.1068 13.584 12.209 13.584C11.3112 13.584 10.584 12.8568 10.584 11.959C10.584 11.0612 11.3112 10.334 12.209 10.334C13.1068 10.334 13.834 11.0612 13.834 11.959Z" fill="black" />
+                            <path d="M4 5L20.5 20" stroke="black" stroke-width="2" />
+                        </svg>
+
+                    </div>
+                </div>
+
+                <div class="form-control form-control--col">
+                    <div class="form-control__col-checkbox">
+                        <div class="form-check">
+                            <label>
+                                <input id="policy"
+                                       class="custom-checkbox"
+                                       type="checkbox"
+                                       name="policy"
+                                       data-pristine-required-message="Обязательное поле"
+                                       required=""
+                                >
+                                <label for="policy" class="form-control__text">
+                                <span>
+                                    Нажимая кнопку  «Отправить», подтверждаете, что ознакомлены  с <a href="#">Политикой обработки персональных данных</a>
+                                </span>
+                                </label>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control__btn-wrapper">
+                    <div class="btn-prev button-close" data-type="forgot-pass">
+                        забыли пароль
+                    </div>
+
+                    <button class="btn">
+                        войти
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class="popup-content">
+            <div class="registration-popup__title">
+                Регистрация
+            </div>
+
+
+            <form action="/" method="get" class="form-block__form validation-form" novalidate="true">
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col">
+                        <input id="email"
+                               class="form-control__input "
+                               type="text"
+                               name="email"
+                               placeholder="e-mail *"
+                               data-pristine-required-message="Обязательное поле"
+                               data-pristine-custom-email
+                               maxlength='50'
+                               required=""
+                        >
+                    </div>
+                </div>
+
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col">
+                        <input id="tel"
+                               class="form-control__input "
+                               type="text"
+                               name="tel"
+                               placeholder="Телефон"
+                               data-pristine-required-message="Обязательное поле"
+                               maxlength='50'
+                        >
+                    </div>
+                </div>
+
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col form-control__pass-wrapper">
+                        <input id="pass1"
+                               class="form-control__input "
+                               type="password"
+                               name="pass1"
+                               placeholder="пароль *"
+                               data-pristine-required-message="Обязательное поле"
+                               maxlength='50'
+                               required=""
+                        >
+
+                        <svg class="show-eye" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2087 6C6.79236 6 3 11.9587 3 11.9587C3 11.9587 5.7625 17.9174 12.2087 17.9174C18.7087 17.9174 21.4174 11.9587 21.4174 11.9587C21.4174 11.9587 17.6799 6 12.2087 6ZM12.2087 15.75C10.0962 15.75 8.41736 14.0712 8.41736 11.9587C8.41736 9.84618 10.0962 8.16736 12.2087 8.16736C14.3212 8.16736 16 9.84618 16 11.9587C16 14.0712 14.3212 15.75 12.2087 15.75Z" fill="black" />
+                            <path d="M13.834 11.959C13.834 12.8568 13.1068 13.584 12.209 13.584C11.3112 13.584 10.584 12.8568 10.584 11.959C10.584 11.0612 11.3112 10.334 12.209 10.334C13.1068 10.334 13.834 11.0612 13.834 11.959Z" fill="black" />
+                            <path d="M4 5L20.5 20" stroke="black" stroke-width="2" />
+                        </svg>
+
+                    </div>
+                </div>
+
+                <div class="form-block__controls">
+                    <div class="form-control form-control--col form-control__pass-wrapper">
+                        <input id="pass2"
+                               class="form-control__input "
+                               type="password"
+                               name="pass2"
+                               placeholder="подтвердите пароль *"
+                               data-pristine-required-message="Обязательное поле"
+                               data-pristine-equals="#pass1"
+                               data-pristine-equals-message="Пароли не совпадают"
+                               maxlength='50'
+                               required=""
+                        >
+
+                        <svg class="show-eye" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2087 6C6.79236 6 3 11.9587 3 11.9587C3 11.9587 5.7625 17.9174 12.2087 17.9174C18.7087 17.9174 21.4174 11.9587 21.4174 11.9587C21.4174 11.9587 17.6799 6 12.2087 6ZM12.2087 15.75C10.0962 15.75 8.41736 14.0712 8.41736 11.9587C8.41736 9.84618 10.0962 8.16736 12.2087 8.16736C14.3212 8.16736 16 9.84618 16 11.9587C16 14.0712 14.3212 15.75 12.2087 15.75Z" fill="black" />
+                            <path d="M13.834 11.959C13.834 12.8568 13.1068 13.584 12.209 13.584C11.3112 13.584 10.584 12.8568 10.584 11.959C10.584 11.0612 11.3112 10.334 12.209 10.334C13.1068 10.334 13.834 11.0612 13.834 11.959Z" fill="black" />
+                            <path d="M4 5L20.5 20" stroke="black" stroke-width="2" />
+                        </svg>
+
+                    </div>
+                </div>
+
+                <div class="form-control form-control--col">
+                    <div class="form-control__col-checkbox">
+                        <div class="form-check">
+                            <label>
+                                <input id="distribution"
+                                       class="custom-checkbox"
+                                       type="checkbox"
+                                       name="distribution"
+                                       data-pristine-required-message="Обязательное поле"
+                                       required=""
+                                >
+                                <label for="distribution" class="form-control__text">
+                                <span>
+                                    Согласен на рассылку
+                                </span>
+                                </label>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control form-control--col">
+                    <div class="form-control__col-checkbox form-control__col-checkbox2">
+                        <div class="form-check">
+                            <label>
+                                <input id="policy2"
+                                       class="custom-checkbox"
+                                       type="checkbox"
+                                       name="policy2"
+                                       data-pristine-required-message="Обязательное поле"
+                                       required=""
+                                >
+                                <label for="policy2" class="form-control__text">
+                                <span>
+                                    Нажимая кнопку  «Отправить», подтверждаете, что ознакомлены  с <a href="#">Политикой обработки персональных данных</a>
+                                </span>
+                                </label>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-control__btn-wrapper">
+                    <div class="btn-prev enter-btn">
+                        войти
+                    </div>
+
+                    <button class="btn">
+                        зарегистрироваться
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+</div>

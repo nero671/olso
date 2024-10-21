@@ -1,0 +1,33 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  width: 87px;
+  height: 24px;
+}
+
+.counter button {
+  width: 24px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #909090;
+  background: inherit;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
+
+.counter input {
+  width: 24px;
+  text-align: center;
+  background: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #909090;
+  height: inherit;
+}

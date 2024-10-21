@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Личный кабинет'
+})
+<body>
+<div class="wrapper personal-account-page-wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page personal-account-page">
+        <div data-observ></div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        личный кабинет
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="order-page__title">
+            личный кабинет
+        </h1>
+
+        <section class="account">
+            <div class="account-container">
+                <div class="account-wrapper">
+                    <div class="account-links">
+                        <a href="#" class="account-link active">
+                            профиль
+                        </a>
+
+                        <a href="#" class="account-link">
+                            мои заказ
+                        </a>
+
+                        <a href="#" class="account-link">
+                            настройки
+                        </a>
+                    </div>
+
+                    <div class="account-content">
+                        <div class="account-personal-info">
+                            <div class="account-personal__item">
+                                <div class="account-title">
+                                    личная информация
+                                </div>
+
+                                <form class="account-form">
+                                    <input type="text" name="name" placeholder="имя *" required />
+                                    <input type="text" name="surname" placeholder="фамилия *" required />
+                                    <input type="text" name="secondname" placeholder="отчество" />
+                                </form>
+                            </div>
+
+                            <div class="account-personal__item">
+                                <div class="account-title">
+                                    контакты
+                                </div>
+
+                                <form class="account-form">
+                                    <input type="text" name="tel" value="+7 987 654 32 10" readonly />
+                                    <input type="text" name="email" value="romanova@gmail.com" readonly />
+                                    <div class="account-form__input-wrapper">
+                                        <input type="text" name="address" value="г. нижний новгород, ул. Интернациональная, д. 16, кв. 24, 213807 " readonly />
+                                        <div class="account-change">
+                                            изменить
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="account-personal__item">
+                                <div class="account-personal__title-wrapper">
+                                    <div class="account-title">
+                                        конфиденциальность
+                                    </div>
+                                    <div class="account-change" data-type="restore-pass">
+                                        изменить пароль
+                                    </div>
+                                </div>
+
+
+                                <form class="account-form">
+                                    <div class="form-control form-control--col form-control__pass-wrapper">
+                                        <input id="pass"
+                                               class="form-control__input "
+                                               type="password"
+                                               name="pass"
+                                               value="testpass"
+                                        >
+
+                                        <svg class="show-eye" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.2087 6C6.79236 6 3 11.9587 3 11.9587C3 11.9587 5.7625 17.9174 12.2087 17.9174C18.7087 17.9174 21.4174 11.9587 21.4174 11.9587C21.4174 11.9587 17.6799 6 12.2087 6ZM12.2087 15.75C10.0962 15.75 8.41736 14.0712 8.41736 11.9587C8.41736 9.84618 10.0962 8.16736 12.2087 8.16736C14.3212 8.16736 16 9.84618 16 11.9587C16 14.0712 14.3212 15.75 12.2087 15.75Z" fill="black" />
+                                            <path d="M13.834 11.959C13.834 12.8568 13.1068 13.584 12.209 13.584C11.3112 13.584 10.584 12.8568 10.584 11.959C10.584 11.0612 11.3112 10.334 12.209 10.334C13.1068 10.334 13.834 11.0612 13.834 11.959Z" fill="black" />
+                                            <path d="M4 5L20.5 20" stroke="black" stroke-width="2" />
+                                        </svg>
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="btn account-btn">
+                                СОХРАНИТЬ
+                            </div>
+                        </div>
+
+                        <div class="account-photo">
+                            <img src="images/ac1.png" alt="Olso">
+                            <div class="account-change">
+                                изменить
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/popups/pick-up-popup.html', { })
+    @@include('html/components/popups/adress-popup.html', { })
+    @@include('html/components/popups/add-adress-popup.html', { })
+    @@include('html/components/popups/thk-popup.html', { })
+    @@include('html/components/popups/restore-popup.html', {
+    "title": "изменение пароля",
+    })
+    @@include('html/components/popups/pass-popup.html', {
+    "title": "изменение пароля",
+    })
+
+    @@include('html/components/popups/thk-popup-pass.html', {})
+    @@include('html/components/cookie/cookie.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

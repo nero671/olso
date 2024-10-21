@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Личный кабинет'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page personal-account-page__order">
+        <div data-observ></div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        личный кабинет
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="order-page__title">
+            личный кабинет
+        </h1>
+
+        <section class="account">
+            <div class="account-container">
+                <div class="account-wrapper">
+                    <div class="account-links">
+                        <a href="#" class="account-link">
+                            профиль
+                        </a>
+
+                        <a href="#" class="account-link active">
+                            мои заказ
+                        </a>
+
+                        <a href="#" class="account-link">
+                            настройки
+                        </a>
+                    </div>
+
+                    <div class="account-content">
+                        <div class="account-personal__title-wrapper">
+                            <div class="account-title">
+                                мои заказы
+                            </div>
+                            <div class="account-order-links">
+                                <div class="account-order-link show">
+                                    заказы
+                                </div>
+                                <div class="account-order-link">
+                                    возвраты
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="account-orders active">
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "transit",
+                                "title": "пиджак",
+                                "src": "images/l1.png",
+                                "article": "skr0245",
+                                "statusText": "в пути",
+                            })
+
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "transit",
+                                "title": "Топ",
+                                "src": "images/ac2.png",
+                                "article": "skr0245",
+                                "statusText": "в пути",
+                            })
+
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "delivered",
+                                "title": "пиджак",
+                                "src": "images/g1.png",
+                                "article": "skr0245",
+                                "statusText": "получен",
+                            })
+
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "delivered",
+                                "title": "пиджак",
+                                "src": "images/g1.png",
+                                "article": "skr0245",
+                                "statusText": "получен",
+                            })
+
+                        </div>
+                        <div class="account-orders">
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "return-in-process",
+                                "title": "пиджак",
+                                "src": "images/l1.png",
+                                "article": "skr0245",
+                                "statusText": "Возврат в рассмотрении",
+                            })
+
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "return-in-process",
+                                "title": "Топ",
+                                "src": "images/ac2.png",
+                                "article": "skr0245",
+                                "statusText": "Возврат в рассмотрении",
+                            })
+
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "return-approve",
+                                "title": "пиджак",
+                                "src": "images/g1.png",
+                                "article": "skr0245",
+                                "statusText": "Возврат одобрен",
+                            })
+
+                            @@include('html/components/account-order/account-order.html', {
+                                "class": "return-success",
+                                "title": "пиджак",
+                                "src": "images/g1.png",
+                                "article": "skr0245",
+                                "statusText": "Возврат совершен",
+                            })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/popups/pick-up-popup.html', { })
+    @@include('html/components/popups/adress-popup.html', { })
+    @@include('html/components/popups/add-adress-popup.html', { })
+    @@include('html/components/popups/thk-popup.html', { })
+    @@include('html/components/popups/return-popup.html', { })
+    @@include('html/components/cookie/cookie.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

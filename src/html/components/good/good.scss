@@ -1,0 +1,164 @@
+.good {
+
+  &:hover {
+    .second-img,
+    .good-color {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+
+  .second-img {
+    position: absolute;
+    opacity: 0;
+    transition: $standartTrans;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-img {
+    position: relative;
+    user-select: none;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      background: #fff;
+      max-height: 623px;
+    }
+  }
+
+  &-fav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: $standartTrans;
+    cursor: pointer;
+    z-index: 8;
+
+    &.active {
+      svg path {
+        fill: #000;
+      }
+    }
+
+    svg {
+      transition: $standartTrans;
+    }
+  }
+
+  &-color {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: $standartTrans;
+    opacity: 0;
+    cursor: pointer;
+
+    img {
+      background: transparent;
+    }
+
+
+    @include media(1350) {
+      opacity: 1;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 10px;
+    overflow: hidden;
+    user-select: none;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    &__title,
+    &__price,
+    &__cart {
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #000;
+      transition: $standartTrans;
+      user-select: none;
+    }
+
+    &__cart {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      position: relative;
+      top: -4px;
+      transition: $standartTrans;
+
+      @include media(700) {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1350px) {
+  .good {
+    &:hover {
+      .good-fav,
+      .good-info__price {
+        opacity: 1;
+        z-index: 2;
+      }
+
+      .good-info__cart {
+        opacity: 1;
+        right: 0;
+      }
+    }
+
+    &-fav {
+      opacity: 0;
+
+      &:hover {
+        svg path {
+          fill: #000;
+        }
+      }
+    }
+
+    &-info {
+      &__price {
+        opacity: 0;
+      }
+
+      &__cart {
+        right: -100%;
+        opacity: 0;
+      }
+    }
+  }
+
+}
+
+@include media(700) {
+  .slider-goods-slider .good-info__cart span {
+    display: flex;
+  }
+}
+
+
+

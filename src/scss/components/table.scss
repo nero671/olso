@@ -1,0 +1,49 @@
+
+
+  .table-sizes__wrapper {
+    //width: 100%;
+    //overflow-x: auto;
+  }
+
+  .table-sizes {
+    border-collapse: collapse;
+    //width: 100%;
+    //max-width: 100%;
+
+    td {
+      border: none;
+      padding: 10px 30px 10px 0;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #909090;
+      text-align: center;
+
+      &.disabled {
+        color: #cecece;
+      }
+    }
+
+    th {
+      padding: 10px 30px 10px 0;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #000;
+    }
+
+    td:first-child {
+      text-align: left;
+
+    }
+
+    th {
+      background-color: #eaeaea;
+      font-weight: 600;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+

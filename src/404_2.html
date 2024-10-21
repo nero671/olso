@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': '404'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page non-exist-page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        404
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="non-existent-page">
+            <div class="non-existent-page__img">
+                <img src="images/404_2.png" alt="olso">
+            </div>
+            <div class="non-existent-page__title">
+                страница не найдена. вернуться в
+                <a href="#">Каталог</a>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/filter/filter.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/cookie/cookie.html', {})
+
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

@@ -1,0 +1,34 @@
+<section class="link @@class">
+    <div class="link__container">
+        <div class="link-wrapper">
+            @@if(context.block1) {
+                @@include('./link.html', {
+                "class": "link-item__transparent",
+                "title": "bestsellers",
+                "src": "images/l1.png"
+                })
+
+                @@include('./link.html', {
+                "class": "link-item__transparent",
+                "title": "новинки",
+                "src": "images/l2.png"
+                })
+            }
+
+            @@if(context.block2) {
+                @@include('./link.html', {
+                "class": "link-item__transparent",
+                "title": "магазины",
+                "src": "images/l3.png"
+                })
+
+                @@include('./link.html', {
+                "class": "link-item__transparent",
+                "title": "Подарочные карты",
+                "src": "images/l4.png"
+                })
+            }
+
+        </div>
+    </div>
+</section>

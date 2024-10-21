@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'магазины'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page detail-page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        магазины
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="shops">
+            <div class="shops__container">
+                <h1 class="shops__title">
+                    магазины
+                </h1>
+
+                <div class="pick-up-popup-content">
+                    <div class="pick-up-popup__item">
+                        <div class="map sales-rep-grid__map" id="map_with_balloon" data-coordinates="53.9023, 27.5619"></div>
+                    </div>
+
+                    <div class="pick-up-popup__item">
+                        <div class="pick-up-popup__search">
+                            <input type="text" placeholder="введите город, адрес" />
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4" cy="4" r="4" fill="black"></circle>
+                            </svg>
+                        </div>
+
+                        <div class="pick-up-popup__choose-spot">
+                            <div class="choose-spot__item">
+                                <div class="choose-spot__img">
+                                    <img src="images/sh1.png" alt="Olso">
+                                </div>
+                                <div class="choose-spot__info">
+                                    <div class="choose-spot__title">
+                                        ТРЦ «Седьмое небо»
+                                    </div>
+                                    <div class="choose-spot__text">
+                                        г. Нижний Новгород, ул.Бетанкура 1
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="choose-spot__item">
+                                <div class="choose-spot__img">
+                                    <img src="images/sh2.png" alt="Olso">
+                                </div>
+                                <div class="choose-spot__info">
+                                    <div class="choose-spot__title">
+                                        ТРЦ «Седьмое небо»
+                                    </div>
+                                    <div class="choose-spot__text">
+                                        г. Нижний Новгород, ул.Бетанкура 1
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="choose-spot__item">
+                                <div class="choose-spot__img">
+                                    <img src="images/sh1.png" alt="Olso">
+                                </div>
+                                <div class="choose-spot__info">
+                                    <div class="choose-spot__title">
+                                        ТРЦ «Седьмое небо»
+                                    </div>
+                                    <div class="choose-spot__text">
+                                        г. Нижний Новгород, ул.Бетанкура 1
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="choose-spot__item">
+                                <div class="choose-spot__img">
+                                    <img src="images/sh2.png" alt="Olso">
+                                </div>
+                                <div class="choose-spot__info">
+                                    <div class="choose-spot__title">
+                                        ТРЦ «Седьмое небо»
+                                    </div>
+                                    <div class="choose-spot__text">
+                                        г. Нижний Новгород, ул.Бетанкура 1
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </section>
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/filter/filter.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/cookie/cookie.html', {})
+
+</div>
+<script>
+    const mapNode = document.getElementById('map_with_balloon');
+
+    mapNode?.addEventListener('store-choice', (e) => {
+        console.log('do ajax', e.detail.id);
+    });
+
+    const Map = () => {
+        if (typeof ymaps === 'undefined') return;
+
+        ymaps.ready(() => {
+            const mapNode = document.getElementById('map_with_balloon');
+
+            if (!mapNode) return;
+
+            const coords = mapNode?.dataset.coordinates.split(',');
+
+            const map = new ymaps.Map(mapNode, {
+                center: coords,
+                zoom: 12,
+            });
+
+            const pointCollection = new ymaps.GeoObjectCollection();
+
+            const convertedPlacemarkActive = "data:image/svg+xml,%3csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M70 33.3328C70 56.6661 40 76.6661 40 76.6661C40 76.6661 10 56.6661 10 33.3328C10 25.3763 13.1607 17.7457 18.7868 12.1196C24.4129 6.49347 32.0435 3.33276 40 3.33276C47.9565 3.33276 55.5871 6.49347 61.2132 12.1196C66.8393 17.7457 70 25.3763 70 33.3328Z' fill='%23283D87'/%3e%3cpath d='M40 43.3334C45.5228 43.3334 50 38.8562 50 33.3334C50 27.8105 45.5228 23.3334 40 23.3334C34.4772 23.3334 30 27.8105 30 33.3334C30 38.8562 34.4772 43.3334 40 43.3334Z' fill='white'/%3e%3c/svg%3e";
+
+            // Координаты точек в Минске
+            const points = [
+                [53.9023, 27.5619], // Первая точка
+                [53.9100, 27.5700], // Вторая точка
+                [53.8930, 27.5480], // Третья точка
+            ];
+
+            // Добавляем все точки в коллекцию
+            points.forEach((point) => {
+                const placemark = new ymaps.Placemark(
+                    point,
+                    null,
+                    {
+                        iconLayout: 'default#image',
+                        iconImageHref: convertedPlacemarkActive,
+                        iconImageSize: [40, 40],
+                    }
+                );
+                pointCollection.add(placemark);
+            });
+
+            // Добавляем коллекцию на карту
+            map.geoObjects.add(pointCollection);
+        });
+    }
+
+    Map();
+
+
+
+</script>
+@@include('html/script.html', {})
+</body>
+</html>

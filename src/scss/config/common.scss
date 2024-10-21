@@ -1,0 +1,43 @@
+// Заголовки, общие БЄМ блоки и проче...
+[data-type] svg {
+  pointer-events: none;
+}
+
+span {
+  color: inherit;
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+}
+
+*::placeholder {
+  color: inherit;
+}
+
+input {
+  border-radius: 0 !important;
+  padding: 10px 6px;
+  background: transparent;
+  //border-bottom: 1px solid #000;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000;
+
+  &::placeholder {
+    color: #909090;
+  }
+}
+
+#map_with_balloon,
+.ymaps-2-1-79-map,
+.ymaps-2-1-79-map, {
+  width: 789px !important;
+  height: 646px !important;
+}
+
+#map_with_balloon canvas {
+
+}

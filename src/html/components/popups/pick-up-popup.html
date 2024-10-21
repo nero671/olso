@@ -1,0 +1,189 @@
+<div class="popup pick-up-popup" data-popup="pick-up">
+    <div class="popup-wrapper">
+        <div class="pick-up-popup__head">
+            <div class="popup-main-title">
+                пункт выдачи заказа
+            </div>
+
+            <div class="close-popup button-close">
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 0.955078L1 20.4325" stroke="black" />
+                    <path d="M0.999933 0.955078L21 20.4325" stroke="black" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="pick-up-popup-content">
+            <div class="pick-up-popup__item">
+                <div class="map sales-rep-grid__map" id="map_with_balloon" data-coordinates="53.9023, 27.5619"></div>
+            </div>
+
+            <div class="pick-up-popup__item">
+                <div class="pick-up-popup custom-select">
+                    <div class="select-selected">
+                        <span>все службы выдачи</span>
+                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="select-items">
+                        <div class="select-option">все службы выдачи</div>
+                        <div class="select-option active">магазины</div>
+                        <div class="select-option">сдэк</div>
+                        <div class="select-option active">5post</div>
+                    </div>
+                </div>
+                    <div class="pick-up-popup__search">
+                            <input type="text" placeholder="введите город, адрес" />
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4" cy="4" r="4" fill="black"></circle>
+                            </svg>
+                    </div>
+
+                    <div class="pick-up-popup__choose-spot">
+                        <div class="choose-spot__item active">
+                            <div class="choose-spot__info">
+                                <div class="choose-spot__title">
+                                    ТРЦ «Седьмое небо»
+                                </div>
+                                <div class="choose-spot__text">
+                                    г. Нижний Новгород, ул.Бетанкура 1
+                                </div>
+                            </div>
+
+                            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4 7L10 1" stroke="black" stroke-width="1.5" />
+                            </svg>
+                        </div>
+
+                        <div class="choose-spot__item">
+                            <div class="choose-spot__info">
+                                <div class="choose-spot__title">
+                                    СТОК-МАГАЗИН ГОРЬКОГО
+                                </div>
+                                <div class="choose-spot__text">
+                                    г. Нижний Новгород, ул.М.Покровская д. 6,к 2
+                                </div>
+                            </div>
+
+                            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4 7L10 1" stroke="black" stroke-width="1.5" />
+                            </svg>
+                        </div>
+
+                        <div class="choose-spot__item">
+                            <div class="choose-spot__info">
+                                <div class="choose-spot__title">
+                                    ТРЦ «ФАНТАСТИКА»
+                                </div>
+                                <div class="choose-spot__text">
+                                    г. Нижний Новгород, ул. Родионова, д.187 В
+                                </div>
+                            </div>
+
+                            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4 7L10 1" stroke="black" stroke-width="1.5" />
+                            </svg>
+                        </div>
+
+                        <div class="choose-spot__item">
+                            <div class="choose-spot__info">
+                                <div class="choose-spot__title">
+                                    сдэк
+                                </div>
+                                <div class="choose-spot__text">
+                                    г. Нижний Новгород, ул.М.Покровская д. 6,к 2
+                                </div>
+                            </div>
+
+                            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4 7L10 1" stroke="black" stroke-width="1.5" />
+                            </svg>
+                        </div>
+
+                        <div class="choose-spot__item">
+                            <div class="choose-spot__info">
+                                <div class="choose-spot__title">
+                                    сдэк
+                                </div>
+                                <div class="choose-spot__text">
+                                    г. Нижний Новгород, ул. Родионова, д.187 В
+                                </div>
+                            </div>
+
+                            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4L4 7L10 1" stroke="black" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="btn pick-up__btn">
+                        применить
+                    </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const mapNode = document.getElementById('map_with_balloon');
+
+    mapNode?.addEventListener('store-choice', (e) => {
+        console.log('do ajax', e.detail.id);
+    });
+
+    const Map = () => {
+        if (typeof ymaps === 'undefined') return;
+
+        ymaps.ready(() => {
+            const mapNode = document.getElementById('map_with_balloon');
+
+            if (!mapNode) return;
+
+            const coords = mapNode?.dataset.coordinates.split(',');
+
+            const map = new ymaps.Map(mapNode, {
+                center: coords,
+                zoom: 12,
+            });
+
+            const pointCollection = new ymaps.GeoObjectCollection();
+
+            const convertedPlacemarkActive = "data:image/svg+xml,%3csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M70 33.3328C70 56.6661 40 76.6661 40 76.6661C40 76.6661 10 56.6661 10 33.3328C10 25.3763 13.1607 17.7457 18.7868 12.1196C24.4129 6.49347 32.0435 3.33276 40 3.33276C47.9565 3.33276 55.5871 6.49347 61.2132 12.1196C66.8393 17.7457 70 25.3763 70 33.3328Z' fill='%23283D87'/%3e%3cpath d='M40 43.3334C45.5228 43.3334 50 38.8562 50 33.3334C50 27.8105 45.5228 23.3334 40 23.3334C34.4772 23.3334 30 27.8105 30 33.3334C30 38.8562 34.4772 43.3334 40 43.3334Z' fill='white'/%3e%3c/svg%3e";
+
+            // Координаты точек в Минске
+            const points = [
+                [53.9023, 27.5619], // Первая точка
+                [53.9100, 27.5700], // Вторая точка
+                [53.8930, 27.5480], // Третья точка
+            ];
+
+            // Добавляем все точки в коллекцию
+            points.forEach((point) => {
+                const placemark = new ymaps.Placemark(
+                    point,
+                    null,
+                    {
+                        iconLayout: 'default#image',
+                        iconImageHref: convertedPlacemarkActive,
+                        iconImageSize: [40, 40],
+                    }
+                );
+                pointCollection.add(placemark);
+            });
+
+            // Добавляем коллекцию на карту
+            map.geoObjects.add(pointCollection);
+        });
+    }
+
+    Map();
+
+
+
+</script>
+

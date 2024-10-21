@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Избранное'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page fav-page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        Избранное
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="catalog">
+            <div class="catalog__container">
+                <div class="catalog-fix-menu">
+                    <div class="catalog-fix-menu__title">
+                        избранное
+                    </div>
+                    <div class="catalog-switcher">
+                        <div class="catalog-switcher__item">
+                            <a href="#">
+                                товары
+                            </a>
+                        </div>
+
+                        <div class="catalog-switcher__item">
+                            <a href="#" class="active">
+                                комплекты
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-wrapper">
+
+
+                    @@include('html/components/catalog-wrapper/catalog-goods.html', {
+                        "grid_3": "true",
+                        "class": "grid_3"
+                    })
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/start-arrow/start-arrow.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/cookie/cookie.html', {})
+
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

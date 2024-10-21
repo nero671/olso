@@ -1,0 +1,129 @@
+.account-good {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px 0;
+  border-bottom: 1px solid #cecece;
+
+  &.transit,
+  &.return-approve {
+    .cart-good__status{
+      background: #909090;
+    }
+  }
+
+  &.transit,
+  &.return-in-process {
+    .cart-good__status {
+      background: #cecece;
+    }
+  }
+
+  &.delivered {
+    .cart-good__status {
+      background: #000;
+    }
+
+    .cart-good__btn {
+      display: flex;
+    }
+  }
+
+  &.return-success {
+    .cart-good__status {
+      background: #000;
+    }
+  }
+
+  .cart-good__status {
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 30px;
+    white-space: nowrap;
+  }
+
+  .cart-good__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart-good__item {
+    display: flex;
+  }
+
+  .cart-good__title-wrapper {
+    gap: 70px;
+    margin-bottom: 35px;
+  }
+
+  .cart-good__status-info {
+    width: 333px;
+
+    .cart-good__title-wrapper {
+      gap: initial;
+    }
+  }
+
+  .cart-good__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart-good__date {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cart-good__price {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .cart-good__info-detail_date {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .cart-good__info-detail_price {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .cart-good__info-detail_total-price {
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  .cart-good__img {
+    height: 100%;
+  }
+
+  .cart-good__btn {
+    border: 1px solid #000;
+    padding: 5px 6px;
+    width: 333px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+<div class="cart-good @@class">
+    <div class="cart-good__img">
+        <img src="@@src" alt="Olso">
+    </div>
+
+    <div class="cart-good__info">
+        <div class="cart-good__title-wrapper">
+            <div class="cart-good__title">
+                @@title
+            </div>
+
+            <div class="cart-good__article">
+                @@article
+            </div>
+        </div>
+
+        <div class="cart-good__info-detail">
+            <div class="cart-good__info-detail_item cart-good__color">
+                цвет: <span>белый</span>
+            </div>
+
+            <div class="cart-good__info-detail_item cart-good__size">
+                размер: <span>M</span>
+            </div>
+        </div>
+
+        <div class="cart-good__values">
+            <div class="cart-good__values-counter">
+                @@include('../counter/counter.html', {})
+            </div>
+
+            <div class="cart-good__values-price-wrapper">
+                <div class="cart-good__values-price">
+                    <span>699</span> ₽
+                </div>
+
+                <div class="cart-good__values-price cart-good__values-price_old">
+                    <span>1 199 </span> ₽
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="cart-good__icons">
+        <div class="good-fav">
+            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.96635 3.14419L9.49997 3.68451L10.0336 3.14419L11.1861 1.9772C12.8021 0.340933 15.4182 0.340934 17.0342 1.9772C18.6553 3.61867 18.6553 6.28384 17.0342 7.92531L10.0141 15.0335C9.72905 15.3222 9.27084 15.3222 8.9858 15.0335L1.96583 7.92538C0.344721 6.28391 0.344724 3.61873 1.96584 1.97727C3.58182 0.340994 6.19792 0.340994 7.8139 1.97726L8.96635 3.14419Z" stroke="#909090" stroke-width="1.5"/>
+            </svg>
+        </div>
+        <div class="cart-good__delete">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.30775 20.4997C6.80908 20.4997 6.38308 20.3232 6.02975 19.97C5.67658 19.6167 5.5 19.1907 5.5 18.692V5.99973H4.5V4.49973H9V3.61523H15V4.49973H19.5V5.99973H18.5V18.692C18.5 19.1972 18.325 19.6247 17.975 19.9747C17.625 20.3247 17.1974 20.4997 16.6923 20.4997H7.30775ZM17 5.99973H7V18.692C7 18.7818 7.02883 18.8556 7.0865 18.9132C7.14417 18.9709 7.21792 18.9997 7.30775 18.9997H16.6923C16.7692 18.9997 16.8398 18.9677 16.9038 18.9035C16.9679 18.8395 17 18.769 17 18.692V5.99973ZM9.404 16.9997H10.9037V7.99973H9.404V16.9997ZM13.0962 16.9997H14.596V7.99973H13.0962V16.9997Z" fill="#909090" />
+            </svg>
+        </div>
+    </div>
+</div>

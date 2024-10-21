@@ -1,0 +1,131 @@
+.detail {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-bottom: 100px;
+
+    @include media(600) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 948px;
+    margin: 0 auto;
+
+    @include media(991) {
+      max-width: 100%;
+    }
+
+    @include media(600) {
+      gap: 40px;
+    }
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include media(600) {
+      gap: 20px;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: initial;
+    color: #909090;
+  }
+
+  a {
+    color: #000;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 15px;
+
+    li {
+      list-style: disc;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #909090;
+    }
+  }
+
+  ol {
+    padding-left: 15px;
+
+    li {
+      list-style: decimal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #909090;
+    }
+  }
+
+  .contacts-text__wrapper {
+    gap: 20px;
+  }
+
+  .contacts-form {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .form-control {
+      gap: 0;
+    }
+
+    @include media(600) {
+      width: 100%;
+    }
+
+    input  {
+      border-bottom: 1px solid #000;
+      font-size: 12px;
+    }
+
+    .btn {
+      width: 100%;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #fff;
+      height: 54px;
+      margin-top: 34px;
+    }
+  }
+
+}

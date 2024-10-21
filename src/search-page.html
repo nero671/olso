@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Страница поиска'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page result-searchs-page">
+        <div data-observ></div>
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        Результаты поиска
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="catalog">
+            <div class="catalog__container">
+                <div class="results-title__wrapper">
+                    <div class="results__title">
+                        результаты поиска
+
+                        <div class="results__value">
+                            найдено 9 товаров и 12 комплектов
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="catalog-wrapper">
+
+                    <div class="results-block">
+                        <div class="results-title__wrapper">
+                            <div class="results__title">
+                                товары
+                            </div>
+                            <div class="results__value">
+                                9 шт.
+                            </div>
+                        </div>
+
+                        @@include('html/components/catalog-wrapper/catalog-goods.html', {
+                        "grid_3": "true",
+                        "class": "grid_3"
+                        })
+                    </div>
+
+                    <div class="results-block">
+                        <div class="results-title__wrapper">
+                            <div class="results__title">
+                                комплекты
+                            </div>
+                            <div class="results__value">
+                                12 шт.
+                            </div>
+                        </div>
+
+                        @@include('html/components/catalog-wrapper/catalog-goods.html', {
+                        "grid_3": "true",
+                        "class": "grid_3"
+                        })
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        @@include('html/components/pagination/pagination.html', {})
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/filter/filter.html', {})
+    @@include('html/components/start-arrow/start-arrow.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+
+</div>
+@@include('html/script.html', {})
+</body>
+</html>

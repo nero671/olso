@@ -1,0 +1,89 @@
+.shops {
+  &__title {
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+  }
+
+  .pick-up-popup-content {
+    max-width: 1543px;
+    margin: 100px auto;
+
+    @include media(1650) {
+      max-width: 100%;
+    }
+  }
+
+  #map_with_balloon, .ymaps-2-1-79-map, .ymaps-2-1-79-map {
+    width: 100% !important;
+  }
+
+  .pick-up-popup__item .pick-up-popup__search input {
+    width: 472px;
+  }
+
+  .pick-up-popup__item {
+    &:last-child {
+      width: 472px;
+    }
+  }
+
+  .choose-spot__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: initial;
+    gap: 32px;
+  }
+
+  .pick-up-popup__choose-spot {
+    max-height: 570px;
+
+    @supports not selector(::-webkit-scrollbar) {
+      scrollbar-color: #fff #fff;
+      scrollbar-width: thin;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0.1px;
+      height: 0.1px;
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  .choose-spot__title,
+  .choose-spot__text {
+    color: #000;
+  }
+}
+
+@include media(991) {
+  .shops {
+    .pick-up-popup-content {
+      flex-direction: column;
+      gap: 50px;
+      margin: 50px auto;
+    }
+
+    .pick-up-popup__item:last-child {
+      width: 100%;
+    }
+
+    .pick-up-popup__item .pick-up-popup__search input {
+      width: 100%;
+    }
+
+    .pick-up-popup__choose-spot {
+      max-height: 100%;
+    }
+  }
+}

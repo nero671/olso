@@ -1,0 +1,110 @@
+<div class="cart @@class" data-popup="cart">
+    <div class="cart-wrapper">
+        <div class="cart-head">
+            <div class="cart-head__wrapper">
+                <div class="cart-head__title">
+                    корзина
+                </div>
+                <div class="cart-head__quantity">
+                    <span>7</span> ШТ.
+                </div>
+            </div>
+
+            <div class="cart-close button-close">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 1L1 21" stroke="black" />
+                    <path d="M0.999933 1L21 21" stroke="black" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="cart-goods">
+            @@include('./cart-good.html', {
+                "class": "",
+                "title": "пиджак",
+                "src": "images/l1.png",
+                "article": "skr0245",
+            })
+
+            @@include('./cart-good.html', {
+                "class": "",
+                "title": "джинсы",
+                "src": "images/l2.png",
+                "article": "skr0245",
+            })
+
+            @@include('./cart-good.html', {
+                "class": "disabled",
+                "title": "пиджак",
+                "src": "images/g1.png",
+                "article": "skr0245",
+            })
+
+            @@include('./cart-good.html', {
+                "class": "",
+                "title": "джинсы",
+                "src": "images/g2.png",
+                "article": "skr0245",
+            })
+        </div>
+
+        <div class="cart-total">
+            <div class="cart-total__item">
+                <div class="cart-total__title">
+                    Товары
+                </div>
+
+                <div class="cart-total__price cart-total__value">
+                    <span>13 489</span> ₽
+                </div>
+            </div>
+
+            <div class="cart-total__item">
+                <div class="cart-total__title">
+                    Скидка
+                </div>
+
+                <div class="cart-total__price cart-total__discount">
+                    <span>784</span> ₽
+                </div>
+            </div>
+
+            <div class="cart-total__item cart-total__promo">
+                <form class="cart-total-form">
+                    <input type="text" name="cart-total-input" placeholder="введите Промокод">
+                    <button type="submit">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.8462 17.6542L12.7923 16.5697L16.6115 12.7504H4.5V11.2504H16.6115L12.7923 7.43118L13.8462 6.34668L19.5 12.0004L13.8462 17.6542Z" fill="#909090" />
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="cart-total__promo-wrapper">
+                    <div class="cart-total__title">
+                        промокод применен
+                    </div>
+
+                    <div class="cart-total__price cart-total__promo-change">
+                        изменить
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-total__item">
+                <div class="cart-total__title">
+                    Итого
+                </div>
+
+                <div class="cart-total__price cart-total__calculated">
+                    <span>12 684</span> ₽
+                </div>
+            </div>
+
+            <a href="#" class="btn">
+                оформить заказ
+            </a>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Личный кабинет'
+})
+<body>
+<div class="wrapper">
+    @@include('html/header/header.html', {})
+    <main class="page personal-account-page__setting">
+        <div data-observ></div>
+
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__container">
+                <ul>
+                    <li>
+                        <a href="/">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li>
+                        личный кабинет
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <h1 class="order-page__title">
+            личный кабинет
+        </h1>
+
+        <section class="account">
+            <div class="account-container">
+                <div class="account-wrapper">
+                    <div class="account-links">
+                        <a href="#" class="account-link">
+                            профиль
+                        </a>
+
+                        <a href="#" class="account-link">
+                            мои заказ
+                        </a>
+
+                        <a href="#" class="account-link active">
+                            настройки
+                        </a>
+                    </div>
+
+                    <div class="account-content">
+                        <div class="account-settings">
+                            <div class="account-title">
+                                настройки
+                            </div>
+
+                            <div class="account-settings__checks">
+                                <label>
+                                    <input id="set1"
+                                           class="custom-checkbox"
+                                           type="checkbox"
+                                           name="set1"
+                                           required=""
+                                    >
+                                    <label for="set1" class="form-control__text">
+                                <span>
+                                    Я согласен (-на) на рассылку по email
+                                </span>
+                                    </label>
+                                </label>
+
+                                <label>
+                                    <input id="set2"
+                                           class="custom-checkbox"
+                                           type="checkbox"
+                                           name="set2"
+                                           required=""
+                                    >
+                                    <label for="set2" class="form-control__text">
+                                <span>
+                                    Я согласен (-на) на получение SMS-рассылок
+                                </span>
+                                    </label>
+                                </label>
+
+                                <label>
+                                    <input id="set3"
+                                           class="custom-checkbox"
+                                           type="checkbox"
+                                           name="set3"
+                                           required=""
+                                    >
+                                    <label for="set3" class="form-control__text">
+                                <span>
+                                    Я согласен (-на) на получение рассылок WhatsApp
+                                </span>
+                                    </label>
+                                </label>
+                            </div>
+
+                            <div class="btn account-settings__btn" data-type="delete">
+                                удалить аккаунт
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    @@include('html/footer/footer.html', {})
+    @@include('html/components/cart/cart.html', {
+        "class": ""
+    })
+    @@include('html/components/popups/pick-up-popup.html', { })
+    @@include('html/components/popups/adress-popup.html', { })
+    @@include('html/components/popups/add-adress-popup.html', { })
+    @@include('html/components/popups/thk-popup.html', { })
+    @@include('html/components/popups/delete-acc-popup.html', { })
+    @@include('html/components/cookie/cookie.html', {})
+</div>
+@@include('html/script.html', {})
+</body>
+</html>
