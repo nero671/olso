@@ -201,7 +201,6 @@ const enterBtnHandler = () => {
 
 const showPassSwitcher = () => {
   const passWrapper = document.querySelectorAll('.form-control__pass-wrapper');
-
   passWrapper.forEach((item) => {
     const input = item.querySelector('input');
     const showEye = item.querySelector('.show-eye');
@@ -376,6 +375,20 @@ const cartAddDetail = () => {
   })
 }
 
+
+const clearInput = () => {
+  const registrationPopup = document.querySelector('.registration-popup');
+  const inputs = registrationPopup?.querySelectorAll('form input');
+
+  registrationPopup?.addEventListener('click', (e) => {
+    if (e.target.closest('.close-popup') || e.target.matches('.popup')) {
+      inputs.forEach((item) => {
+        item.value = '';
+      })
+    }
+  })
+}
+
 export {
   isWebp,
   isMobile,
@@ -397,5 +410,6 @@ export {
   cookies,
   fixMenu,
   catalogMenuScroll,
-  cartAddDetail
+  cartAddDetail,
+  clearInput
 };

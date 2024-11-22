@@ -21,7 +21,7 @@ import {
     showPassSwitcher,
     cartSwitcher,
     orderExpressSwitch,
-    chooseSpot, fileImg, cookies, fixMenu, catalogMenuScroll, cartAddDetail
+    chooseSpot, fileImg, cookies, fixMenu, catalogMenuScroll, cartAddDetail,clearInput
 } from './modules';
 
 // import BurgerMenu from './modules/BurgerMenu';
@@ -185,4 +185,4 @@ cookies();
 fixMenu();
 catalogMenuScroll();
 cartAddDetail();
-
+clearInput();

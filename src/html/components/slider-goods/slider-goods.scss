@@ -10,6 +10,31 @@
     overflow-x: hidden;
   }
 
+  .swiper-slide {
+
+    .good-img {
+      height: 623px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        max-height: 100%;
+      }
+
+      @include media(1200) {
+        height: 720px;
+      }
+
+      @include media(600) {
+        height: 440px;
+      }
+
+    }
+
+
+
+  }
+
   &__title-wrapper {
     display: flex;
     align-items: center;

@@ -24,6 +24,7 @@
 
     img {
       width: 100%;
+      height: 100%;
 
       @include media(600) {
         height: 542px;

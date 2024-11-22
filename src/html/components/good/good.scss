@@ -106,6 +106,10 @@
       top: -4px;
       transition: $standartTrans;
 
+      span {
+        white-space: nowrap;
+      }
+
       @include media(700) {
         span {
           display: none;
